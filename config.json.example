@@ -1,0 +1,17 @@
+{
+    "tuya_cloud": {
+        "api_region": "sg",
+        "api_key": "YOUR_API_KEY",
+        "api_secret": "YOUR_API_SECRET",
+        "comment": "Tuya project configuration"
+    },
+    "server": {
+        "host": "0.0.0.0",
+        "port": 5000,
+        "debug": true
+    },
+    "scan": {
+        "timeout": 10,
+        "max_retries": 3
+    }
+}

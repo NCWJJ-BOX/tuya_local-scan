@@ -8,9 +8,14 @@ import os
 
 sys.stdout.reconfigure(encoding='utf-8', errors='replace')
 
-API_KEY = "YOUR_API_KEY"
-API_SECRET = "YOUR_API_SECRET"
-API_REGION = "sg"
+# Load config
+config_path = os.path.join(os.path.dirname(__file__), "config.json")
+with open(config_path, "r") as f:
+    config = json.load(f)
+
+API_KEY = config["tuya_cloud"]["api_key"]
+API_SECRET = config["tuya_cloud"]["api_secret"]
+API_REGION = config["tuya_cloud"]["api_region"]
 
 print("[*] Connecting to Tuya Cloud API (Singapore)...")
 c = tinytuya.Cloud(
